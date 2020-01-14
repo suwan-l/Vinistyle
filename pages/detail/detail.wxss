@@ -1,0 +1,158 @@
+/* pages/detail/detail.wxss */
+.s-swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper-conn{
+  width: 100%;
+  height: 100%;
+}
+.swiper-conn swiper-item image{
+  width:100%;
+  height:100%;
+}
+.w-top{
+  width:95%;
+  padding: 25rpx 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin:auto;
+  border-bottom: 3rpx solid #f3f3f3;
+}
+.w-name{
+  width:55%;
+  font-size:32rpx;
+  overflow:hidden;     
+  white-space:nowrap;  
+  text-overflow:ellipsis;
+}
+.w-conn{
+  width:95%;
+  margin:auto;
+  border-bottom: 3rpx solid #f3f3f3;
+}
+.w-basicInfo{
+  background: #f8f8f8;
+  /* border:2rpx solid #71d5e0; */
+  padding-bottom: 30rpx;
+  margin-top:20rpx;
+}
+.w-basicInfo view{
+  width: 25%;
+  display:inline-block;
+  padding-top: 30rpx;
+}
+.w-basicInfo view text{
+  display: block;
+  text-align: center;
+  line-height: 1;
+}
+.w-basicInfo view text:nth-child(1){
+  font-size:26rpx;
+  padding-bottom:10rpx;
+}
+.w-basicInfo view text:nth-child(2){
+  font-size: 22rpx;
+  color:#acacac;
+}
+.w-infoTips{
+  padding-top:20rpx;
+}
+.w-infoTips text{
+  border-radius: 15rpx;
+  /* border: 2rpx solid #acacac; */
+  padding: 10rpx 15rpx;
+  margin-right:30rpx;
+  font-size: 26rpx;
+  color: #598bcd;
+  background: #f2f6fa;
+}
+.w-other{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.w-data{
+  color:#0099ff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.w-video{
+  color:#cc3399;
+}
+.w-map{
+  width: 95%;
+  margin: 30rpx auto;
+}
+.map-title{
+  color:#0099ff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.map-info{
+  width: 100%;
+  height: 500rpx;
+  margin:30rpx 0rpx 0rpx;
+}
+.map-info map{
+  width:100%;
+  height:100%;
+}
+.w-bottom{
+  width: 95%;
+  height: 80rpx;
+  margin: 0rpx auto 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+/*视频弹窗*/
+.modal-mask {
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 35;
+  color: #fff;
+}
+.modal-dialog{
+  width: 100%;
+  height: 600rpx;
+  position: fixed;
+  top:30%;
+  left:0;
+  right:0;
+  margin:0rpx auto;
+  z-index: 40;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.p-close{
+  width: 60rpx;
+  height:60rpx;
+  position: absolute;
+  top:-60rpx;
+  right: -5rpx;
+  z-index: 99;
+}
+.w-close{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+#myVideo{
+  width: 100%;
+  height: 100%;
+}

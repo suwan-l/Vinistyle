@@ -1,0 +1,81 @@
+<!--授权-->
+<view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='/images/logo.png'></image>
+        </view>
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称、头像、地区及性别)</text>
+        </view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+
+<!--内容-->
+<view wx:else="">
+  <!--城市和搜索框 ↓-->
+  <view class='w-top'>
+    <!--城市 ↓-->
+    <view class='w-city'>
+      <view class='cityImg'>
+        <i-icon type="coordinates" size="24" color="#0099ff" />
+      </view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          <text style='display:none'>{{region[0]}}</text>
+          <text style='display:block'>{{region[1]}}</text> 
+          <text style='display:none'>{{region[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <!--城市 ↑-->
+
+    <!--搜索框 ↓-->
+    <view class='w-search' >
+      <input class='searchInput' bindinput="keywords" placeholder='请输入商圈关键词' type="text" />
+      <view class='searchBtn' bindtap="keybtn">
+        <i-icon type="search" size="23" color="#80848f" />
+      </view>
+    </view>
+    <!--搜索框 ↑-->
+  </view>
+  <!--城市和搜索框 ↑-->
+
+  <!--店铺列表 ↓-->
+  <view class="w-container">
+    <view class='w-list' wx:for="{{shopList}}" bindtap="listDetail" data-listid="{{item.id}}" wx:key ="index">
+      <view class='w-left'>
+        <image src='{{item.img}}' mode='widthFix'></image>
+      </view>
+      <view class='w-right'>
+        <view>
+          <text>{{item.name}}</text>
+        </view>
+        <view>面积：
+          <text>{{item.measure}}平米</text>
+        </view>
+        <view>月租：
+          <text>{{item.monthly}}元</text>
+        </view>
+        <view>区位/商圈：
+          <text>{{item.name}}</text>
+        </view>
+        <view>推荐度：
+          <block wx:if='{{item.recommend > 0}}'>
+            <block wx:for='{{item.recommend-0}}' wx:key><i-icon type="like_fill" size="15" color="#ff000c" /></block>
+          </block>
+          <block wx:if='{{item.recommend < 5}}'>
+            <block wx:for='{{5-item.recommend-0}}' wx:key="un"><i-icon type="like" size="15" color="#ff000c" /></block>
+          </block>  
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--店铺列表 ↑-->
+</view>
+

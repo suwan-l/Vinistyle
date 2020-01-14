@@ -1,0 +1,137 @@
+/**********获取授权**********/
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+.header image {
+    width: 290rpx;
+    height: 120rpx;
+}
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+
+/**********首页内容**********/
+.w-top{
+  padding: 0rpx 20rpx;
+  height:80rpx;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.w-city{
+  width:30%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  overflow:hidden;     
+  white-space:nowrap;  
+  text-overflow:ellipsis;
+}
+.picker{
+  display:block;
+  overflow:hidden;     
+  white-space:nowrap;  
+  text-overflow:ellipsis;
+  font-size:30rpx;
+  color: #0099ff;
+}
+.w-search{
+  width:70%;
+  height: 70rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f8f9;
+  border-radius: 5rpx;
+}
+.searchInput{
+  height: 100%;
+  width: 80%;
+  font-size: 28rpx;
+  display: inline-block;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrapl;
+  margin: 0rpx 0rpx 0rpx 10rpx;
+}
+.searchBtn {
+  float: right;
+  width: 20%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #c0c0c0;
+  position: relative;
+}
+.searchBtn::before {
+  content: "";
+  width: 3rpx;
+  height: 30rpx;
+  background: #c0c0c0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -15rpx;
+}
+.searchBtn image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+/*店铺列表*/
+.w-container{
+  padding:0rpx 20rpx;
+  box-sizing: border-box;
+}
+.w-list{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  border-bottom:2rpx solid #f3f3f3;
+  padding:20rpx 0rpx;
+  box-sizing: border-box;
+}
+.w-left{
+  width:50%;
+}
+.w-left image{
+  width:100%;
+  display: block;
+}
+.w-right{
+  width:46%;
+}
+.w-right view{
+  font-size:25rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 55rpx;
+}
+.w-right text{
+  display:block;
+  overflow:hidden;     
+  white-space:nowrap;  
+  text-overflow:ellipsis;
+}
